@@ -1,0 +1,139 @@
+:root {
+  --bg-body: #f4f4f4;
+  --bg-card: #ffffff;
+  --text-main: #333333;
+  --text-muted: #888888;
+  --border-color: #dddddd;
+  
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  
+  --container-width: 30vw;
+  --textarea-height: 8rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  padding: var(--space-md);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.taskContainer {
+  width: var(--container-width);
+  min-width: 300px;
+  padding: var(--space-md);
+  background-color: var(--bg-card);
+  border-radius: var(--radius-lg);
+  resize: ver;
+  overflow: hidden;
+}
+
+form {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-sm);
+}
+
+form input, 
+form textarea, 
+form button {
+  font: inherit;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  outline: none;
+}
+
+form textarea {
+  height: var(--textarea-height);
+  resize: none;
+}
+
+button:hover {
+  filter: brightness(0.9);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  border-top: 1px solid var(--border-color);
+  padding: var(--space-md) var(--space-sm);
+}
+
+.taskItem button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.taskText {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .taskContainer {
+    width: 95vw;
+    flex-direction: column;
+  }
+  
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .taskContainer {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  .taskContainer {
+    width: 30vw;
+  }
+}

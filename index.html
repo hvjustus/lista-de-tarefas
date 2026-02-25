@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="./index.js"></script>
+
+    <title>Lista de Tarefas</title>
+</head>
+
+<body>
+    <header>
+        <h1>Lista de Tarefas</h1>
+        <small> por <a href="https://github.com/hvjustus">hvjustus</a> :3 </small>
+    </header>
+
+    <main>
+        <div class="taskContainer">
+            <form id="taskForm">
+                <div class="formInput">
+                    <input type="text" placeholder="Título da tarefa" id="titleInput"/>
+                    <textarea placeholder="Descrição da tarefa" id="descriptionInput"></textarea>
+                </div>
+                <button type="submit">Adicionar</button>
+            </form>
+
+            <div class="taskList">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
